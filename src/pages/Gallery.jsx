@@ -4,18 +4,18 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useRef } from 'react'
 // TODO: Import your images from '../assets/photos/'
 const photos = [
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.09.03 PM.jpeg', caption:  'A magical moment together 💖'},
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.09.02 PM.jpeg', caption: 'Cuddles and cozy times 🥰' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.08.53 PM.jpeg', caption: 'Every day is special with you 💫' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.08.49 PM.jpeg', caption: 'Laughing together forever 😂' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.08.46 PM.jpeg', caption: 'Our journey, our story 📖' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.08.30 PM.jpeg', caption: 'Cherished moments, always 💞' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.07.52 PM.jpeg', caption: 'You & me, perfect together 💑' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.07.49 PM.jpeg', caption: 'Sweetest memories with you 🍬' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'Adventures with you are the best 🌄' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile lights up my world ✨' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Silly faces, endless memories 😜' },
-  { src: '/src/assets/photos/WhatsApp Image 2025-07-07 at 11.07.42 PM.jpeg', caption: 'To many more adventures! 🚀' },
+  { src: '/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'A magical moment together 💖' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile lights up my world ✨' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Silly faces, endless memories 😜' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.03 PM.jpeg', caption: 'Adventures with you are the best 🌄' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.02 PM.jpeg', caption: 'Cuddles and cozy times 🥰' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.53 PM.jpeg', caption: 'Every day is special with you 💫' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.49 PM.jpeg', caption: 'Laughing together forever 😂' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.46 PM.jpeg', caption: 'Our journey, our story 📖' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.30 PM.jpeg', caption: 'Cherished moments, always 💞' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.52 PM.jpeg', caption: 'You & me, perfect together 💑' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.49 PM.jpeg', caption: 'Sweetest memories with you 🍬' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.42 PM.jpeg', caption: 'To many more adventures! 🚀' },
 ]
 
 export default function Gallery() {

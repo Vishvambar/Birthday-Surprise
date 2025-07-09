@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 // TODO: Replace with your own music file in '../assets/music/'
-const musicSrc = '/src/assets/music/WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3'
+const musicSrc = '/music/WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3'
 
 export default function Music() {
   const audioRef = useRef(null)

@@ -4,10 +4,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useRef } from 'react'
 // TODO: Import your images from '../assets/photos/'
 const photos = [
-  { src: '/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'A magical moment together 💖' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile lights up my world ✨' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Silly faces, endless memories 😜' },
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.03 PM.jpeg', caption: 'Adventures with you are the best 🌄' },
+
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.02 PM.jpeg', caption: 'Cuddles and cozy times 🥰' },
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.53 PM.jpeg', caption: 'Every day is special with you 💫' },
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.49 PM.jpeg', caption: 'Laughing together forever 😂' },
@@ -16,6 +14,10 @@ const photos = [
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.52 PM.jpeg', caption: 'You & me, perfect together 💑' },
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.49 PM.jpeg', caption: 'Sweetest memories with you 🍬' },
   { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.42 PM.jpeg', caption: 'To many more adventures! 🚀' },
+  { src: '/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'A magical moment together 💖' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile lights up my world ✨' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Silly faces, endless memories 😜' },
+
 ]
 
 export default function Gallery() {
@@ -41,19 +43,7 @@ export default function Gallery() {
     }
   }
 
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (!el) return;
-    const scrollAmount = el.offsetWidth * 0.8; // Scroll by 80% of container width
-    const interval = setInterval(() => {
-      if (el.scrollLeft + el.offsetWidth >= el.scrollWidth - 10) {
-        el.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        el.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
-    }, 3500);
-    return () => clearInterval(interval);
-  }, []);
+  // Remove the auto-scroll useEffect
 
   return (
     <motion.div
@@ -93,14 +83,14 @@ export default function Gallery() {
             viewport={{ once: true, amount: 0.4 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: idx * 0.08 }}
           >
-            <div style={{height:'30vh'}} className="bg-white border-4 border-white rounded-xl shadow-md overflow-hidden w-full  flex items-center justify-center">
+            <div style={{ height: '30vh' }} className="bg-white border-4 border-white rounded-xl shadow-md overflow-hidden w-full  flex items-center justify-center">
               <img src={photo.src} alt={photo.caption} className="object-cover w-full h-full" />
             </div>
             <span className="font-dancing text-pink-400 text-base text-center mt-3 mb-2 px-2">{photo.caption}</span>
             {/* Animated heart sticker */}
             <motion.span
               className="absolute -top-3 -right-3 text-pink-300 text-2xl rotate-12 select-none"
-              style={{marginTop:'10px'}}
+              style={{ marginTop: '10px' }}
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Infinity, duration: 1.2, ease: 'easeInOut' }}
             >

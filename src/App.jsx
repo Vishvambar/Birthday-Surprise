@@ -13,7 +13,7 @@ function App() {
   const [showControls, setShowControls] = useState(false)
   
   // Background music file
-  const musicSrc = '/music/WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3'
+  const musicSrc = '/music/videoplayback.mp3'
   
   const toggleMusic = () => {
     if (!audioRef.current) return

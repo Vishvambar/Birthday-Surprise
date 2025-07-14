@@ -97,7 +97,7 @@ The application features background music that plays throughout the user experie
 - Music controls appear in the top-right corner after 2 seconds
 - Users can toggle play/pause with the floating music button
 - Music loops continuously for ambient atmosphere
-- Audio file: `WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3`
+- Audio file: `videoplayback.mp3`
 
 ## 🔧 Development Guidelines
 

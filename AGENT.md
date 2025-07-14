@@ -93,10 +93,12 @@ npm run lint
 
 ## 🎵 Background Music
 
-The application features background music that plays throughout the user experience:
-- Music controls appear in the top-right corner after 2 seconds
-- Users can toggle play/pause with the floating music button
-- Music loops continuously for ambient atmosphere
+The application features background music with a special welcome experience:
+- **Welcome Popup**: A beautiful modal appears when the website opens with birthday message
+- **Music Activation**: Users click "Start the Magic!" to begin the experience and music
+- **Background Audio**: Music plays continuously throughout the journey after activation
+- **Music Controls**: Toggle button appears in top-right corner after 2 seconds
+- **Seamless Experience**: Music loops continuously for ambient atmosphere
 - Audio file: `videoplayback.mp3`
 
 ## 🔧 Development Guidelines

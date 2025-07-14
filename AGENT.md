@@ -94,10 +94,11 @@ npm run lint
 ## 🎵 Background Music
 
 The application features background music with a special welcome experience:
-- **Welcome Popup**: A beautiful modal appears when the website opens with birthday message
+- **Welcome Popup**: A simple, romantic modal appears when the website opens
 - **Music Activation**: Users click "Start the Magic!" to begin the experience and music
 - **Background Audio**: Music plays continuously throughout the journey after activation
 - **Music Controls**: Toggle button appears in top-right corner after 2 seconds
+- **Auto-pause**: Music automatically pauses when app goes to background/loses focus
 - **Seamless Experience**: Music loops continuously for ambient atmosphere
 - Audio file: `videoplayback.mp3`
 

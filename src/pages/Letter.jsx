@@ -1,10 +1,9 @@
-import { useNavigate } from 'react-router-dom'
+
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRef, useState } from 'react'
 import React from 'react'
 
 export default function Letter() {
-  const navigate = useNavigate()
   const letterRef = useRef(null)
   const [showNext, setShowNext] = useState(false)
   const [checked, setChecked] = useState(false)
@@ -64,13 +63,11 @@ export default function Letter() {
             className="flex flex-col items-center mt-8 w-full"
           >
             <div className="font-dancing text-pink-400 text-lg mb-2">With all my love, Shembdi 💕</div>
-            <button
-              onClick={() => navigate('/music')}
-              className="bg-pink-200 hover:bg-pink-300 text-pink-600 font-dancing px-8 py-4 rounded-full shadow-lg text-xl transition-all flex items-center gap-2 w-full max-w-xs"
-              style={{ boxShadow: '0 4px 24px 0 #f9a8d4aa' , display: 'flex', alignItems:'center', justifyContent:'center' }}
-            >
-              <span>Play Our Song 🎵</span>
-            </button>
+            <div className="text-center mt-4 font-dancing text-pink-500 text-xl">
+              🎉 Happy Birthday, Malkya! 🎉
+              <br />
+              <span className="text-lg text-purple-500">Hope you enjoy the music! 🎵</span>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

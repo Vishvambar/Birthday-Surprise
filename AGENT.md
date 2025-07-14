@@ -38,8 +38,7 @@ src/
 ├── pages/              # Route components
 │   ├── Landing.jsx     # Welcome/home page
 │   ├── Gallery.jsx     # Photo gallery
-│   ├── Letter.jsx      # Personal letter
-│   └── Music.jsx       # Music player (final page)
+│   └── Letter.jsx      # Personal letter (final page)
 └── assets/             # Static assets
     ├── photos/         # Photo gallery images
     ├── music/          # Audio files
@@ -90,8 +89,15 @@ npm run lint
 
 1. **Landing** (`/`) - Welcome page with animated heart
 2. **Gallery** (`/gallery`) - Photo gallery section
-3. **Letter** (`/letter`) - Personal letter/message
-4. **Music** (`/music`) - Music player section (final page)
+3. **Letter** (`/letter`) - Personal letter/message (final page)
+
+## 🎵 Background Music
+
+The application features background music that plays throughout the user experience:
+- Music controls appear in the top-right corner after 2 seconds
+- Users can toggle play/pause with the floating music button
+- Music loops continuously for ambient atmosphere
+- Audio file: `WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3`
 
 ## 🔧 Development Guidelines
 
@@ -133,8 +139,8 @@ npm run lint
 
 ### Content Sections
 - **Gallery**: Photo slideshow/grid
-- **Letter**: Personal message display
-- **Music**: Audio player integration with final birthday message
+- **Letter**: Personal message display (final page)
+- **Background Music**: Continuous ambient music with toggle controls
 
 ## 📝 Common Tasks
 

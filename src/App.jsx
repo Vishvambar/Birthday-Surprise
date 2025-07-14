@@ -2,15 +2,66 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Landing from './pages/Landing'
 import Gallery from './pages/Gallery'
 import Letter from './pages/Letter'
-import Music from './pages/Music'
 import './App.css'
 import { AnimatePresence } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
 
 function App() {
   const location = useLocation()
+  const audioRef = useRef(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const [showControls, setShowControls] = useState(false)
+  
+  // Background music file
+  const musicSrc = '/music/WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3'
+  
+  const toggleMusic = () => {
+    if (!audioRef.current) return
+    
+    if (isPlaying) {
+      audioRef.current.pause()
+    } else {
+      audioRef.current.play()
+    }
+    setIsPlaying(!isPlaying)
+  }
+  
+  // Show controls after a brief delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowControls(true)
+    }, 2000)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-pink-100 via-blue-100 to-purple-100 relative overflow-x-hidden font-sans">
+      {/* Background Music */}
+      <audio 
+        ref={audioRef} 
+        src={musicSrc} 
+        loop 
+        onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
+      />
+      
+      {/* Music Controls */}
+      {showControls && (
+        <div className="fixed top-4 right-4 z-50">
+          <button
+            onClick={toggleMusic}
+            className="bg-pink-400 hover:bg-pink-500 text-white rounded-full p-3 shadow-lg transition-all duration-300 flex items-center justify-center"
+            title={isPlaying ? 'Pause Music' : 'Play Music'}
+          >
+            {isPlaying ? (
+              <span className="text-lg">⏸️</span>
+            ) : (
+              <span className="text-lg">🎵</span>
+            )}
+          </button>
+        </div>
+      )}
+      
       {/* Magical floating hearts animation (Framer Motion, original) */}
       {/**
       <div className="fixed inset-0 pointer-events-none z-50">
@@ -54,7 +105,6 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/letter" element={<Letter />} />
-          <Route path="/music" element={<Music />} />
         </Routes>
       </AnimatePresence>
     </div>

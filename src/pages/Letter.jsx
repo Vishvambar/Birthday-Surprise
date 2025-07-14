@@ -44,7 +44,7 @@ export default function Letter() {
         className="bg-white/80 rounded-3xl shadow-xl p-4 sm:p-6 w-full max-w-xs font-dancing relative overflow-y-auto"
         style={{ minHeight: '60vh', backgroundImage: 'url(https://www.transparenttextures.com/patterns/paper-fibers.png)' }}
       >
-        <h2 className="text-xl sm:text-2xl text-pink-500 mb-4">My Dearest Kedar,</h2>
+        <h2 className="text-xl sm:text-2xl text-pink-500 mb-4">My Dearest Malkya,</h2>
         <p className="text-base sm:text-lg text-purple-600 mb-6" style={{ whiteSpace: 'pre-line' }}>
           {`Happy birthday to the most wonderful person in my life! 💖
 
@@ -52,7 +52,7 @@ export default function Letter() {
 
           Here's to more adventures, more memories, and a lifetime together. I love you more than words can say!`}
         </p>
-        <div className="text-right text-pink-400 text-base sm:text-lg mt-8">With love, Sakshi ❤️</div>
+        <div className="text-right text-pink-400 text-base sm:text-lg mt-8">With love, Shembdi ❤️</div>
       </div>
       <AnimatePresence>
         {checked && showNext && (
@@ -63,7 +63,7 @@ export default function Letter() {
             transition={{ duration: 0.7, ease: 'easeInOut' }}
             className="flex flex-col items-center mt-8 w-full"
           >
-            <div className="font-dancing text-pink-400 text-lg mb-2">With all my love, Sakshi 💕</div>
+            <div className="font-dancing text-pink-400 text-lg mb-2">With all my love, Shembdi 💕</div>
             <button
               onClick={() => navigate('/music')}
               className="bg-pink-200 hover:bg-pink-300 text-pink-600 font-dancing px-8 py-4 rounded-full shadow-lg text-xl transition-all flex items-center gap-2 w-full max-w-xs"

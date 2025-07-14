@@ -3,14 +3,11 @@ import Landing from './pages/Landing'
 import Gallery from './pages/Gallery'
 import Letter from './pages/Letter'
 import Music from './pages/Music'
-import Surprise from './pages/Surprise'
-import { useState } from 'react'
 import './App.css'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
   const location = useLocation()
-  const [count, setCount] = useState(0)
 
   return (
     <div className="min-h-screen w-full bg-gradient-to-b from-pink-100 via-blue-100 to-purple-100 relative overflow-x-hidden font-sans">
@@ -58,7 +55,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/letter" element={<Letter />} />
           <Route path="/music" element={<Music />} />
-          <Route path="/surprise" element={<Surprise />} />
         </Routes>
       </AnimatePresence>
     </div>

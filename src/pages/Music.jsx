@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { useNavigate } from 'react-router-dom'
 // TODO: Replace with your own music file in '../assets/music/'
 const musicSrc = '/music/WhatsApp Video 2025-07-08 at 10.38.47 PM.mp3'
 
@@ -8,7 +7,6 @@ export default function Music() {
   const audioRef = useRef(null)
   const [playing, setPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
-  const navigate = useNavigate()
 
   const togglePlay = () => {
     if (!audioRef.current) return
@@ -57,14 +55,13 @@ export default function Music() {
         <div className="w-full h-2 bg-pink-100 rounded-full overflow-hidden mb-2">
           <div className="h-full bg-pink-400 transition-all" style={{ width: `${progress}%` }} />
         </div>
-        <span className="text-pink-400 font-dancing text-base">Happy Birthday, Kedar! 🎶</span>
+        <span className="text-pink-400 font-dancing text-base">Happy Birthday, Malkya! 🎶</span>
       </div>
-      <button
-        onClick={() => navigate('/surprise')}
-        className="bg-pink-400 text-white font-dancing px-8 py-4 rounded-full shadow-lg text-xl sm:text-2xl transition-transform active:scale-95 hover:bg-pink-500 w-full max-w-xs mt-8"
-      >
-        Ready for the surprise?
-      </button>
+      <div className="text-center mt-8 font-dancing text-pink-500 text-xl">
+        🎉 Happy Birthday, Malkya! 🎉
+        <br />
+        <span className="text-lg text-purple-500">With love from Shembdi 💕</span>
+      </div>
     </motion.div>
   )
 } 

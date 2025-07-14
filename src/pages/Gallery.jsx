@@ -1,23 +1,21 @@
-import { useMemo, useEffect } from 'react'
+import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useRef } from 'react'
 // TODO: Import your images from '../assets/photos/'
 const photos = [
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.03 PM.jpeg', caption: 'Adventures with you are the best 🌄' },
-
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.02 PM.jpeg', caption: 'Cuddles and cozy times 🥰' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.53 PM.jpeg', caption: 'Every day is special with you 💫' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.49 PM.jpeg', caption: 'Laughing together forever 😂' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.46 PM.jpeg', caption: 'Our journey, our story 📖' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.30 PM.jpeg', caption: 'Cherished moments, always 💞' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.52 PM.jpeg', caption: 'You & me, perfect together 💑' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.49 PM.jpeg', caption: 'Sweetest memories with you 🍬' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.42 PM.jpeg', caption: 'To many more adventures! 🚀' },
-  { src: '/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'A magical moment together 💖' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile lights up my world ✨' },
-  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Silly faces, endless memories 😜' },
-
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.03 PM.jpeg', caption: 'Beautiful moments together 🌟' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.02 PM.jpeg', caption: 'Happy times with you 😊' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.53 PM.jpeg', caption: 'Making memories every day 💫' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.49 PM.jpeg', caption: 'Laughter and joy together 😄' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.46 PM.jpeg', caption: 'Our special journey 💕' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.08.30 PM.jpeg', caption: 'Precious moments with you 💞' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.52 PM.jpeg', caption: 'Perfect together always 💑' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.49 PM.jpeg', caption: 'Sweet memories we cherish 🍬' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.07.42 PM.jpeg', caption: 'Adventure awaits us! 🚀' },
+  { src: '/photos/WhatsApp Image 2025-07-08 at 8.29.05 PM.jpeg', caption: 'Magical moments together 💖' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.22.55 PM.jpeg', caption: 'Your smile brightens my day ✨' },
+  { src: '/photos/WhatsApp Image 2025-07-07 at 11.09.56 PM.jpeg', caption: 'Fun times and silly faces 😜' },
 ]
 
 export default function Gallery() {
@@ -61,9 +59,9 @@ export default function Gallery() {
           <span className="text-2xl text-blue-200">✨</span>
         </div>
         <h2 className="text-3xl font-dancing text-pink-500 mb-1 drop-shadow">Our Memories</h2>
-        <div className="text-base font-dancing text-purple-400 mb-2">A special journey for Kedar’s birthday</div>
+        <div className="text-base font-dancing text-purple-400 mb-2">A special journey for Malkya’s birthday</div>
         {/* Birthday badge */}
-        <div className="bg-gradient-to-r from-pink-200 to-purple-200 rounded-full px-5 py-2 shadow text-pink-600 font-dancing text-lg mb-4 -mt-2 border-2 border-white">Happy Birthday, Kedar! 🎂</div>
+        <div className="bg-gradient-to-r from-pink-200 to-purple-200 rounded-full px-5 py-2 shadow text-pink-600 font-dancing text-lg mb-4 -mt-2 border-2 border-white">Happy Birthday, Malkya! 🎂</div>
       </div>
       {/* Polaroid gallery row with extra background and spacing */}
       <div
